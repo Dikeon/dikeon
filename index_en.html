@@ -400,6 +400,11 @@
                 padding: 4rem 0;
             }
         }
+    .link-color-text {
+    color: var(--accent-color); /* Uses the same color as the footer links */
+    /* Add this if you want it to change color on hover like links do */
+    transition: color 0.3s ease;
+}
     </style>
 </head>
 <body>
@@ -519,9 +524,9 @@
     <div class="container">
         <p>© <span id="currentYear"></span> Dikeon Solutions. All rights reserved.</p>
         <p>Pioneering solutions in Risk, Security, and Sustainability.</p>
-        <p><a href="mailto:contact@dikeon.de">contact@dikeon.de</a> | <a href="tel:+491234567890">(0123) 456-7890</a></p>
+        <p><a href="mailto:contact@dikeon.de">dikeonde@gmail.com</a> | <span class="link-color-text">+49 (0) 1743995177</span></p>
         <!-- Updated imprint link to: imprint.html -->
-        <p><a href="imprint.html">Imprint</a> | <a href="#">Privacy Policy</a></p>
+        <p><a href="imprint.html">Imprint</a> 
     </div>
 </footer>
 
