@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikeon - Integratives Risikomanagement | Struktur . Sicherheit . Nachhaltigkeit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0A2B4C;
+            --secondary-color: #1A5A96;
+            --accent-color: #F0B400;
+            --light-gray: #f4f7f6;
+            --medium-gray: #a0aec0;
+            --dark-gray: #4a5568;
+            --text-color: #2d3748;
+            --white: #ffffff;
+            --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --font-serif: 'Merriweather', Georgia, Cambria, "Times New Roman", Times, serif;
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --border-radius: 8px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            color: var(--primary-color);
+            margin-bottom: 0.75em;
+            line-height: 1.3;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        p { margin-bottom: 1rem; }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 1rem;
+        }
+
+        .text-center { text-align: center; }
+        .section-padding { padding: 4rem 0; }
+        .bg-light { background-color: var(--light-gray); }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: 2px solid var(--accent-color);
+        }
+        .btn-primary:hover {
+            background-color: #e0a400;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .site-header {
+            background-color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link img {
+            max-height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        .main-nav li {
+            margin-left: 1.5rem;
+        }
+        .main-nav li:first-child {
+            margin-left: 0;
+        }
+        .main-nav a {
+            font-weight: 600;
+            color: var(--primary-color);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after,
+        .main-nav a.active::after {
+            width: 100%;
+        }
+        .main-nav a[lang="en"], .main-nav a[lang="de"] {
+            font-weight: bold;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            margin-left: 1.5rem;
+        }
+        .main-nav a[lang="en"]:hover, .main-nav a[lang="de"]:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+        .main-nav a[lang="en"]::after, .main-nav a[lang="de"]::after {
+            display: none;
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        #hero {
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        #hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-logo-container {
+            background-color: #0A2B4C;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+        }
+        .hero-logo-container img {
+            max-width: 250px;
+            height: auto;
+            display: block;
+        }
+        .hero-tagline-sub {
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            margin-top: 0.5rem;
+            font-weight: 600;
+            color: #e0e0e0;
+            text-transform: uppercase;
+        }
+
+        #about-intro .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        #about-intro .about-text {
+            flex: 1;
+        }
+        #about-intro .about-image {
+            flex: 1;
+            max-width: 450px;
+        }
+        #about-intro .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mission-vision-values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .mvv-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .mvv-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .mvv-card img {
+            max-width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+        }
+        .mvv-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .mvv-card p {
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+        .section-intro-text {
+            margin-top: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .service-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .service-card-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .service-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        .service-card p {
+            flex-grow: 1;
+        }
+
+        #cta-banner {
+            background-color: var(--accent-color);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        #cta-banner h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        /* No specific styling for the removed .btn-primary */
+
+        .site-footer {
+            background-color: var(--primary-color);
+            color: var(--light-gray);
+            padding: 2rem 0 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .site-footer p {
+            margin-bottom: 0.5rem;
+        }
+        .site-footer a {
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+        .site-footer a:hover {
+            color: var(--white);
+        }
+        .site-footer .container > p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            #hero h1 { font-size: 2.25rem; }
+            .hero-tagline-sub { font-size: 1.2rem; letter-spacing: 2px;}
+
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                box-shadow: var(--shadow-md);
+                padding-bottom: 1rem;
+            }
+            .main-nav.active {
+                display: block;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+            }
+            .main-nav li {
+                margin: 0.75rem 0;
+                margin-left: 0;
+            }
+            .main-nav a[lang="en"], .main-nav a[lang="de"] {
+                margin-left: 0;
+                display: inline-block;
+                width: auto;
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            #about-intro .about-content {
+                flex-direction: column;
+            }
+            #about-intro .about-image {
+                margin-top: 2rem;
+                max-width: 100%;
+            }
+
+            .mission-vision-values-grid {
+                grid-template-columns: 1fr;
+            }
+            .mvv-card img {
+                height: 150px;
+            }
+
+            .section-padding {
+                padding: 3rem 0;
+            }
+            #hero {
+                padding: 4rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a href="#hero" class="logo-link">
+            <!-- Pfad zur lokalen Datei: images/dikeon_logo.png -->
+            <img src="images/dikeon_logo.png" alt="Dikeon Logo" style="max-height: 50px;" onerror="this.onerror=null;this.src='https://placehold.co/150x50/0A2B4C/F0B400?text=Dikeon'">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#hero" class="active">Startseite</a></li>
+                <li><a href="#about-intro">Über Uns</a></li>
+                <li><a href="#mission-vision-values">Mission & Werte</a></li>
+                <li><a href="#services">Expertise</a></li>
+                <!-- Verlinkung zur englischen Seite: index_en.html -->
+                <li><a href="index_en.html" lang="en" hreflang="en">EN</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-nav-toggle" aria-label="Navigation umschalten" aria-expanded="false">
+            ☰
+        </button>
+    </div>
+</header>
+
+<main>
+    <!-- Hintergrundbildpfad: images/hero_background.jpg -->
+    <section id="hero" style="background: linear-gradient(rgba(10, 43, 76, 0.75), rgba(10, 43, 76, 0.75)), url('images/hero_background.jpg') no-repeat center center/cover;">
+        <div class="container text-center">
+            <div class="hero-logo-container">
+                <!-- Pfad zur lokalen Datei: images/dikeon_logo.png -->
+                <img src="images/dikeon_logo.png" alt="Dikeon Solutions Logo" onerror="this.onerror=null;this.src='https://placehold.co/250x100/0A2B4C/F0B400?text=DIKEON+LOGO'">
+            </div>
+            <h1>INTEGRATIVES RISIKOMANAGEMENT</h1>
+            <p class="hero-tagline-sub">STRUKTUR . SICHERHEIT . NACHHALTIGKEIT</p>
+            </div>
+    </section>
+
+    <section id="about-intro" class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Über Dikeon Solutions</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Dikeon Solutions steht an vorderster Front **integrativer Risikolösungen**, einzigartig positioniert durch unsere starke wissenschaftliche Grundlage in Veterinärmedizin, Naturschutzmedizin und fortschrittlichem Risikomanagement. Diese multidisziplinäre Expertise ermöglicht es uns, komplexe Herausforderungen an der Schnittstelle von menschlicher, tierischer und Umweltgesundheit anzugehen.</p>
+                    <p>Unsere Kernmission ist es, strategische Einblicke und praktische Lösungen zur Verbesserung der **Resilienz** gegenüber einem breiten Spektrum von Risiken zu liefern. Wir engagieren uns für die Förderung einer proaktiven Kultur der Vorsorge und nutzen evidenzbasierte Ansätze, um die öffentliche Gesundheit zu schützen, das ökologische Gleichgewicht zu gewährleisten und eine nachhaltige Entwicklung zu unterstützen. Bei Dikeon wandeln wir wissenschaftliches Verständnis in umsetzbare Strategien für eine sicherere und gesündere Welt um.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Pfad zur lokalen Datei: images/about_scientific_expertise.jpg -->
+                    <img src="images/about_scientific_expertise.jpg" alt="Wissenschaftliche Expertise und Teamwork" onerror="this.onerror=null;this.src='https://placehold.co/450x300/a0aec0/4a5568?text=Teamwork+Bild'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission-vision-values" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center">Unser Fokus</h2>
+            <div class="mission-vision-values-grid">
+                <div class="mvv-card">
+                    <!-- Pfad zur lokalen Datei: images/mission_compass.jpg -->
+                    <img src="images/mission_compass.jpg" alt="Kompass, Symbol unserer Mission" onerror="this.onerror=null;this.src='https://placehold.co/300x180/1A5A96/ffffff?text=MISSION'">
+                    <h3>Unsere Mission</h3>
+                    <p class="section-intro-text">Wir sind spezialisiert auf umfassende Beratungsleistungen in Risikomanagement und Nachhaltigkeit. Unsere Mission ist es, die organisationale Resilienz durch innovative Lösungen und Expertenberatung zu stärken und proaktive Reaktionen auf Herausforderungen zu ermöglichen.</p>
+                </div>
+                <div class="mvv-card">
+                    <!-- Pfad zur lokalen Datei: images/vision_globe.jpg -->
+                    <img src="images/vision_globe.jpg" alt="Globus, Symbol unserer Vision" onerror="this.onerror=null;this.src='https://placehold.co/300x180/1A5A96/ffffff?text=VISION'">
+                    <h3>Unsere Vision</h3>
+                    <p class="section-intro-text">Dikeon strebt danach, ein führender Anbieter exzellenter Beratungsdienstleistungen zu sein, der Organisationen befähigt, Risiken effektiv zu managen und Nachhaltigkeit als integralen Bestandteil ihrer Strategie zu etablieren – für eine sichere und zukunftsorientierte Entwicklung.</p>
+                </div>
+                <div class="mvv-card">
+                    <!-- Pfad zur lokalen Datei: images/values_lighthouse.jpg -->
+                    <img src="images/values_lighthouse.jpg" alt="Leuchtturm, Symbol unserer Werte" onerror="this.onerror=null;this.src='https://placehold.co/300x180/1A5A96/ffffff?text=WERTE'">
+                    <h3>Unsere Werte</h3>
+                    <p class="section-intro-text">Integrität, Expertise und Partnerschaft sind die Grundpfeiler unserer Arbeit. Wir verpflichten uns zu den höchsten ethischen Standards, fundiertem Fachwissen und einem kollaborativen Ansatz, um maßgeschneiderte und effektive Lösungen für unsere Kunden zu entwickeln.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Unsere Kernkompetenzbereiche</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-card-icon">⚙️</span>
+                    <h3>Risikomanagement</h3>
+                    <p>Umfassende Strategien zur Risikoidentifizierung, -bewertung und -minderung über verschiedene Sektoren hinweg. Wir entwickeln maßgeschneiderte Rahmenwerke, um Unsicherheiten zu managen und die Entscheidungsfindung für die organisationale Resilienz zu verbessern.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-card-icon">🌿</span>
+                    <h3>Biosicherheit</h3>
+                    <p>Schutz von Gesundheits- und Agrarsystemen vor biologischen Bedrohungen. Unsere Dienstleistungen umfassen Prävention, Erkennung, Reaktionsplanung und Politikentwicklung für Infektionskrankheiten und invasive Arten.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-card-icon">⚕️</span>
+                    <h3>One Health (Einheit von Mensch, Tier, Umwelt)</h3>
+                    <p>Implementierung integrierter Ansätze, die die Vernetzung von menschlicher, tierischer und Umweltgesundheit anerkennen. Wir fördern die Zusammenarbeit zur Bekämpfung von Zoonosen, antimikrobiellen Resistenzen und Fragen der Lebensmittelsicherheit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta-banner">
+        <div class="container">
+            <h2>Arbeiten Sie mit Dikeon für eine resiliente Zukunft zusammen</h2>
+            <p style="color: var(--primary-color); max-width: 700px; margin: 0 auto 1.5rem auto;">Lassen Sie uns besprechen, wie Dikeons einzigartige Expertise in Risikomanagement, Biosicherheit und One Health Ihre spezifischen Herausforderungen lösen kann.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© <span id="currentYear"></span> Dikeon Solutions. Alle Rechte vorbehalten.</p>
+        <p>Wegweisende Lösungen in Risiko, Sicherheit und Nachhaltigkeit.</p>
+        <p><a href="mailto:contact@dikeon.de">contact@dikeon.de</a> | <a href="tel:+491234567890">(0123) 456-7890</a></p>
+        <!-- Impressum-Link hinzugefügt -->
+        <p><a href="impressum.html">Impressum</a> | <a href="#">Datenschutzerklärung</a></p>
+    </div>
+</footer>
+
+<script>
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (navToggle && mainNav) {
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('active');
+        });
+    }
+
+    // Smooth scrolling and active link highlighting logic
+    const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+    const headerHeight = document.querySelector('.site-header') ? document.querySelector('.site-header').offsetHeight : 70;
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.hash;
+            if (targetId) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            }
+        });
+    });
+
+    const currentYearSpan = document.getElementById('currentYear');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+    const sections = document.querySelectorAll('main section[id]');
+    const allNavLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+
+    function onScroll() {
+        let currentSectionId = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            // Überprüfen Sie, ob der Benutzer über den Anfang des Abschnitts gescrollt hat, mit Anpassung für die Kopfzeilenhöhe
+            if (window.scrollY >= sectionTop - (headerHeight + 50)) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+
+        allNavLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === currentSectionId) {
+                link.classList.add('active');
+            }
+        });
+
+        // Spezielle Behandlung für den Hero-Abschnitt, wenn ganz oben
+        const heroLink = document.querySelector('.main-nav a[href="#hero"]');
+        if (heroLink && window.scrollY < sections[0].offsetTop - (headerHeight + 50)) {
+            allNavLinks.forEach(nav => nav.classList.remove('active'));
+            heroLink.classList.add('active');
+        }
+    }
+
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('load', onScroll);
+</script>
+</body>
+</html>

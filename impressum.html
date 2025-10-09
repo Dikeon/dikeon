@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum | Dikeon Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Shared Styles from main pages */
+        :root {
+            --primary-color: #0A2B4C;
+            --secondary-color: #1A5A96;
+            --accent-color: #F0B400;
+            --light-gray: #f4f7f6;
+            --medium-gray: #a0aec0;
+            --dark-gray: #4a5568;
+            --text-color: #2d3748;
+            --white: #ffffff;
+            --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --font-serif: 'Merriweather', Georgia, Cambria, "Times New Roman", Times, serif;
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --border-radius: 8px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-sans); line-height: 1.6; color: var(--text-color); background-color: var(--white); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); color: var(--primary-color); margin-bottom: 0.75em; line-height: 1.3; }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        p { margin-bottom: 1rem; }
+        a { color: var(--secondary-color); text-decoration: none; transition: color 0.3s ease; }
+        a:hover { color: var(--accent-color); }
+        ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1rem; }
+
+        .container { width: 90%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 0 1rem; }
+        .text-center { text-align: center; }
+        .section-padding { padding: 4rem 0; }
+        .bg-light { background-color: var(--light-gray); }
+
+        .site-header { background-color: var(--white); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow-md); }
+        .site-header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-link img { max-height: 50px; width: auto; display: block; }
+
+        .main-nav ul { list-style: none; display: flex; align-items: center; }
+        .main-nav li { margin-left: 1.5rem; }
+        .main-nav a { font-weight: 600; color: var(--primary-color); padding: 0.5rem 0; position: relative; }
+        .main-nav a[lang="en"], .main-nav a[lang="de"] { font-weight: bold; padding: 0.25rem 0.5rem; border: 1px solid var(--secondary-color); border-radius: var(--border-radius); }
+        .main-nav a[lang="en"]:hover, .main-nav a[lang="de"]:hover { background-color: var(--secondary-color); color: var(--white); }
+        
+        .imprint-content {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+        .imprint-content h3 {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .site-footer {
+            background-color: var(--primary-color);
+            color: var(--light-gray);
+            padding: 2rem 0 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .site-footer p {
+            margin-bottom: 0.5rem;
+        }
+        .site-footer a {
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+        .site-footer a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            .imprint-content { padding: 1.5rem; }
+            .main-nav ul { flex-direction: column; align-items: flex-start; }
+            .main-nav li { margin: 0.5rem 0; margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a href="index_de.html#hero" class="logo-link">
+            <!-- Lokaler Pfad: images/dikeon_logo.png -->
+            <img src="images/dikeon_logo.png" alt="Dikeon Logo" onerror="this.onerror=null;this.src='https://placehold.co/150x50/0A2B4C/F0B400?text=Dikeon'">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <!-- Link zur deutschen Startseite -->
+                <li><a href="index_de.html">Zur Startseite</a></li>
+                <!-- Link zur englischen Impressumsseite -->
+                <li><a href="imprint.html" lang="en" hreflang="en">EN</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="imprint" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 2rem;">Impressum</h2>
+            <div class="imprint-content">
+                
+                <h3>Angaben gemäß $\S 5$ TMG (Telemediengesetz)</h3>
+                <p><strong>Dikeon Solutions GmbH</strong> (Musterfirma)</p>
+                <p>Musterstraße 123<br>
+                10115 Berlin, Deutschland</p>
+
+                <h3 style="margin-top: 2rem;">Vertreten durch</h3>
+                <p>Dr. Max Mustermann (Geschäftsführer)<br>
+                (Platzhalter)</p>
+
+                <h3 style="margin-top: 2rem;">Kontakt</h3>
+                <p>Telefon: +49 (0) 123 4567890 (Platzhalter)<br>
+                E-Mail: <a href="mailto:contact@dikeon.de">contact@dikeon.de</a></p>
+
+                <h3 style="margin-top: 2rem;">Registereintrag</h3>
+                <p>Eintragung im Handelsregister.<br>
+                Registergericht: Amtsgericht Berlin (Charlottenburg)<br>
+                Registernummer: HRB 123456 B (Platzhalter)</p>
+
+                <h3 style="margin-top: 2rem;">Umsatzsteuer-Identifikationsnummer</h3>
+                <p>Umsatzsteuer-Identifikationsnummer gemäß $\S 27$ a Umsatzsteuergesetz:<br>
+                DE123456789 (Platzhalter)</p>
+
+                <h3 style="margin-top: 2rem;">Verantwortlich für den Inhalt nach $\S 55$ Abs. 2 RStV</h3>
+                <p>Dr. Max Mustermann<br>
+                Musterstraße 123<br>
+                10115 Berlin, Deutschland<br>
+                (Platzhalter)</p>
+
+                <h3 style="margin-top: 2rem;">Streitschlichtung</h3>
+                <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br>
+                <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a></p>
+                <p>Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+                <h3 style="margin-top: 2rem;">Haftung für Inhalte</h3>
+                <p>Als Diensteanbieter sind wir gemäß $\S 7$ Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach $\S \S 8$ bis $10$ TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. (Auszug)</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© <span id="currentYear"></span> Dikeon Solutions. Alle Rechte vorbehalten.</p>
+        <p><a href="mailto:contact@dikeon.de">contact@dikeon.de</a></p>
+        <p><a href="impressum.html">Impressum</a> | <a href="#">Datenschutzerklärung</a></p>
+    </div>
+</footer>
+
+<script>
+    const currentYearSpan = document.getElementById('currentYear');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+</script>
+</body>
+</html>
