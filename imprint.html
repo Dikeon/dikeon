@@ -1,158 +1,147 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imprint | Dikeon Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Shared Styles from main pages */
-        :root {
-            --primary-color: #0A2B4C;
-            --secondary-color: #1A5A96;
-            --accent-color: #F0B400;
-            --light-gray: #f4f7f6;
-            --medium-gray: #a0aec0;
-            --dark-gray: #4a5568;
-            --text-color: #2d3748;
-            --white: #ffffff;
-            --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            --font-serif: 'Merriweather', Georgia, Cambria, "Times New Roman", Times, serif;
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --border-radius: 8px;
-        }
-
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; font-size: 16px; }
-        body { font-family: var(--font-sans); line-height: 1.6; color: var(--text-color); background-color: var(--white); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); color: var(--primary-color); margin-bottom: 0.75em; line-height: 1.3; }
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
-        h3 { font-size: 1.5rem; }
-        p { margin-bottom: 1rem; }
-        a { color: var(--secondary-color); text-decoration: none; transition: color 0.3s ease; }
-        a:hover { color: var(--accent-color); }
-        ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1rem; }
-
-        .container { width: 90%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 0 1rem; }
-        .text-center { text-align: center; }
-        .section-padding { padding: 4rem 0; }
-        .bg-light { background-color: var(--light-gray); }
-
-        .site-header { background-color: var(--white); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow-md); }
-        .site-header .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo-link img { max-height: 50px; width: auto; display: block; }
-
-        .main-nav ul { list-style: none; display: flex; align-items: center; }
-        .main-nav li { margin-left: 1.5rem; }
-        .main-nav a { font-weight: 600; color: var(--primary-color); padding: 0.5rem 0; position: relative; }
-        .main-nav a[lang="en"], .main-nav a[lang="de"] { font-weight: bold; padding: 0.25rem 0.5rem; border: 1px solid var(--secondary-color); border-radius: var(--border-radius); }
-        .main-nav a[lang="en"]:hover, .main-nav a[lang="de"]:hover { background-color: var(--secondary-color); color: var(--white); }
-        
-        .imprint-content {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
-        }
-        .imprint-content h3 {
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            margin-top: 1.5rem;
-            color: var(--secondary-color);
-        }
-
-        .site-footer {
-            background-color: var(--primary-color);
-            color: var(--light-gray);
-            padding: 2rem 0 1rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        .site-footer p {
-            margin-bottom: 0.5rem;
-        }
-        .site-footer a {
-            color: var(--accent-color);
-            transition: color 0.3s ease;
-        }
-        .site-footer a:hover {
-            color: var(--white);
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.75rem; }
-            .imprint-content { padding: 1.5rem; }
-            .main-nav ul { flex-direction: column; align-items: flex-start; }
-            .main-nav li { margin: 0.5rem 0; margin-left: 0; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Notice | Dikeon Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #0A2B4C;
+      --secondary-color: #1A5A96;
+      --accent-color: #F0B400;
+      --light-gray: #f4f7f6;
+      --text-color: #2d3748;
+      --white: #ffffff;
+      --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-serif: 'Merriweather', Georgia, Cambria, "Times New Roman", Times, serif;
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --border-radius: 8px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden;}
+    body{font-family:var(--font-sans);line-height:1.6;color:var(--text-color);background-color:var(--white);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:var(--font-serif);color:var(--primary-color);margin-bottom:.75em;line-height:1.3;}
+    h1{text-align:center;font-size:2.5rem;}
+    h2{font-size:2rem;}
+    h3{font-size:1.25rem;color:var(--secondary-color);}
+    p{margin-bottom:1rem;}
+    a{color:var(--secondary-color);text-decoration:none;transition:color .3s ease;}
+    a:hover{color:var(--accent-color);}
+    .container{width:90%;max-width:1100px;margin:0 auto;padding:0 1rem;}
+    .section-padding{padding:4rem 0;}
+    .site-header{background-color:var(--white);padding:.7rem 0;position:sticky;top:0;z-index:1000;box-shadow:var(--shadow-md);}
+    .site-header .container{display:flex;justify-content:space-between;align-items:center;}
+    .logo-link img{max-height:70px;width:auto;display:block;}
+    .main-nav ul{list-style:none;display:flex;align-items:center;}
+    .main-nav li{margin-left:1.5rem;}
+    .main-nav li:first-child{margin-left:0;}
+    .main-nav a{font-weight:600;color:var(--primary-color);padding:.5rem 0;position:relative;}
+    .main-nav a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background-color:var(--accent-color);transition:width .3s ease;}
+    .main-nav a:hover::after{width:100%;}
+    .main-nav a[lang]{font-weight:bold;padding:.25rem .5rem;border:1px solid var(--secondary-color);border-radius:var(--border-radius);margin-left:1.5rem;}
+    .main-nav a[lang]:hover{background-color:var(--secondary-color);color:var(--white);}
+    .main-nav a[lang]::after{display:none;}
+    .mobile-nav-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--primary-color);}
+    #hero{color:var(--white);padding:6rem 0;text-align:center;background:linear-gradient(rgba(10,43,76,0.75),rgba(10,43,76,0.75)),url('images/hero_background.jpg') no-repeat center center/cover;}
+    #hero h1{font-size:3rem;margin-bottom:1rem;color:var(--white);font-weight:700;text-transform:uppercase;}
+    #hero p{font-size:1.25rem;max-width:700px;margin:1rem auto 2rem;}
+    .imprint-content{background-color:var(--white);padding:2rem;border-radius:var(--border-radius);box-shadow:var(--shadow-md);margin-top:2rem;}
+    .imprint-content h3{border-bottom:2px solid var(--accent-color);padding-bottom:.5rem;margin-top:1.5rem;}
+    .site-footer{background-color:var(--primary-color);color:var(--light-gray);padding:2rem 0 1rem;text-align:center;font-size:.9rem;}
+    .site-footer a{color:var(--accent-color);}
+    .site-footer a:hover{color:var(--white);}
+    .link-color-text{color:var(--accent-color);}
+    @media(max-width:768px){
+      #hero{padding:4rem 0;}
+      h1{font-size:2rem;}
+      .main-nav{display:none;position:absolute;top:100%;left:0;width:100%;background-color:var(--white);box-shadow:var(--shadow-md);}
+      .main-nav.active{display:block;}
+      .main-nav ul{flex-direction:column;align-items:center;padding:1rem 0;}
+      .main-nav li{margin:.75rem 0;}
+      .mobile-nav-toggle{display:block;}
+    }
+  </style>
 </head>
 <body>
 
 <header class="site-header">
-    <div class="container">
-        <a href="index_en.html" class="logo-link">
-            <img src="images/dikeon_logo.png" alt="Dikeon Logo" onerror="this.onerror=null;this.src='https://placehold.co/150x50/0A2B4C/F0B400?text=Dikeon'">
-        </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index_en.html">Back to Home Page</a></li>
-                <li><a href="impressum.html" lang="de" hreflang="de">DE</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="container">
+    <a href="index_de.html#hero" class="logo-link">
+      <img src="images/hero1.png" alt="Dikeon Logo" onerror="this.onerror=null;this.src='https://placehold.co/150x50/0A2B4C/F0B400?text=Dikeon'">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index_de.html#hero">Home</a></li>
+        <li><a href="index_de.html#about-intro">About Us</a></li>
+        <li><a href="index_de.html#services">Expertise</a></li>
+        <li><a href="index.html" lang="en" hreflang="en">EN</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
 </header>
 
 <main>
-    <section id="imprint" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center" style="margin-bottom: 2rem;">Imprint / Legal Notice</h2>
-            <div class="imprint-content">
-                
-                <h3>Information according to $\S 5$ DDG (Digital Services Act)</h3>
-                <p><strong>Dikeon Solutions</strong></p>
-                <p>Fontanestraße 32<br>
-                12049 Berlin, Germany</p>
+  <section id="hero">
+    <div class="container text-center">
+      <h1>Legal Notice</h1>
+      <p>Legal information pursuant to § 5 DDG (Digital Services Act)</p>
+    </div>
+  </section>
 
-                <h3 style="margin-top: 2rem;">Represented by</h3>
-                <p>Susanne Repanelis</p>
+  <section id="impressum-content" class="section-padding bg-light">
+    <div class="container">
+      <div class="imprint-content">
+        <h3>Information according to § 5 DDG</h3>
+        <p><strong>Dikeon Solutions</strong><br>
+          Fontanestraße 32<br>
+          12049 Berlin
+        </p>
 
-                <h3 style="margin-top: 2rem;">Contact</h3>
-                <p>Phone: +49 174 399 5177<br>
-                E-mail: <a href="mailto:dikeonde@gmail.com">dikeonde@gmail.com</a></p>
-                
-                <h3 style="margin-top: 2rem;">Disclaimer</h3>
-                
-                <h4>Copyright</h4>
-                <p>The content and works created by the site operators on these pages are subject to German copyright law. The duplication, processing, distribution, and any form of commercialization beyond the scope of the copyright law require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use. Insofar as the content on this page was not created by the operator, the copyrights of third parties are observed. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, please notify us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.</p>
-                
-                <h4 style="margin-top: 1.5rem;">Data Protection</h4>
-                <p>The use of our website is usually possible without providing personal data. Insofar as personal data (e.g., name, address, or email addresses) is collected on our pages, this is always done on a voluntary basis, if possible. This data will not be passed on to third parties without your express consent.</p>
-                <p>We point out that data transmission over the Internet (e.g., communication by email) can have security gaps. Complete protection of data against access by third parties is not possible.</p>
-                <p>We hereby expressly object to the use of contact data published within the framework of the imprint obligation by third parties for sending unsolicited advertising and informational materials. The operators of the pages expressly reserve the right to take legal action in the event of unsolicited sending of advertising information, such as spam emails.</p>
-                
-            </div>
-        </div>
-    </section>
+        <h3>Represented by</h3>
+        <p>Susanne Repanelis</p>
+
+        <h3>Contact</h3>
+        <p>Phone: <span class="link-color-text">+49 174 399 5177</span><br>
+        Email: <a href="mailto:dikeonde@gmail.com">dikeonde@gmail.com</a></p>
+
+        <h3>Disclaimer</h3>
+        <h4>Copyright</h4>
+        <p>The contents and works created by the site operators on these pages are subject to German copyright law. Reproduction, editing, distribution, and any kind of use outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are permitted only for private, non-commercial use.</p>
+        <p>Where the content on this site was not created by the operator, the copyrights of third parties are respected. Third-party content is identified as such. Should you nonetheless become aware of a copyright infringement, please inform us accordingly. Upon notification of violations, we will remove such content immediately.</p>
+
+        <h4>Data Protection</h4>
+        <p>The use of our website is generally possible without providing personal data. If personal data (for example, name, address, or email address) is collected on our pages, this is always done on a voluntary basis. These data will not be passed on to third parties without your express consent.</p>
+        <p>We point out that data transmission over the Internet (for example, communication by email) can have security vulnerabilities. Complete protection of data against access by third parties is not possible.</p>
+        <p>The use of contact data published within the scope of the legal notice obligation by third parties for sending unsolicited advertising and informational materials is hereby expressly prohibited. The operators expressly reserve the right to take legal action in the event of unsolicited sending of advertising information, such as spam emails.</p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
-    <div class="container">
-        <p>© <span id="currentYear"></span> Dikeon Solutions. All rights reserved.</p>
-        <p><a href="mailto:dikeonde@gmail.com">dikeonde@gmail.com</a></p>
-        <p><a href="imprint.html">Imprint</a> | <a href="#">Privacy Policy</a></p>
-    </div>
+  <div class="container">
+    <p>© <span id="currentYear"></span> Dikeon Solutions. All rights reserved.</p>
+    <p>Pioneering solutions in risk, security, and sustainability.</p>
+    <p><a href="mailto:dikeonde@gmail.com">dikeonde@gmail.com</a> | <span class="link-color-text">+49 (0) 1743995177</span></p>
+    <p><a href="impressum.html">Legal Notice</a></p>
+  </div>
 </footer>
 
 <script>
-    const currentYearSpan = document.getElementById('currentYear');
-    if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-    }
+  const currentYearSpan=document.getElementById('currentYear');
+  if(currentYearSpan){currentYearSpan.textContent=new Date().getFullYear();}
+  const navToggle=document.querySelector('.mobile-nav-toggle');
+  const mainNav=document.querySelector('.main-nav');
+  if(navToggle&&mainNav){
+    navToggle.addEventListener('click',()=>{
+      const expanded=navToggle.getAttribute('aria-expanded')==='true';
+      navToggle.setAttribute('aria-expanded',!expanded);
+      mainNav.classList.toggle('active');
+    });
+  }
 </script>
 </body>
 </html>
