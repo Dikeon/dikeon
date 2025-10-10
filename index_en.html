@@ -1,12 +1,3 @@
-Yes, I can see why that's happening. That horizontal "bounce" on Apple devices is a common problem. It typically occurs when some element on the page is even a single pixel wider than the viewport width.
-
-While you already have `overflow-x: hidden;` on the `<body>`, some mobile browsers, particularly Safari on iOS, respond more reliably when this rule is also applied to the `<html>` tag. This forces the entire document to prevent horizontal overflow.
-
-Here is the corrected code with that single line added.
-
------
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -611,4 +602,3 @@ Here is the corrected code with that single line added.
 </script>
 </body>
 </html>
-```
