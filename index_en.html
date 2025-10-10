@@ -232,19 +232,22 @@
         #about-intro .about-text {
             flex: 1;
         }
-        #about-intro .about-image {
-            width: 80vw; /* 80% of the viewport width */
-            max-height: 250px; /* Maximum height to keep it thin */
-            margin: 2rem auto; /* Spacing above/below and centered */
-            overflow: hidden; /* Hides parts of the image that don't fit the container */
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-lg);
-        }
-        #about-intro .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image covers the area, cropping as needed */
-            border-radius: var(--border-radius);
+#about-intro .about-image {
+    width: 80vw; /* 80% of the viewport width */
+    max-height: 250px; /* Maximum height to keep it thin */
+    margin: 2rem auto; /* Centered with spacing */
+    overflow: hidden; /* Keeps image within bounds if resized */
+    border-radius: 0; /* Removes rounded corners */
+    box-shadow: none; /* Removes shadow */
+}
+
+#about-intro .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area */
+    border-radius: 0; /* Removes rounded corners on the image */
+}
+
         }
          /* --- MODIFIED CODE END --- */
 
