@@ -1,16 +1,4 @@
-You're running into horizontal scrolling because when you set `max-width: 400px` for the image, that size might be larger than the container width on very narrow screens (like phones) where the main content area is constrained by the overall page width.
 
-The fix is to use a relative width unit like **percentage (`%`)** along with the `max-width` property, especially within the media query for smaller screens. This ensures the logo size scales down gracefully to fit within the viewport without exceeding it.
-
-I've made the necessary changes below:
-
-1.  Updated the **`.hero-logo-container img`** CSS to use a **relative width** inside the media query.
-2.  Removed all HTML and CSS comments.
-3.  The logo remains **centered** due to the parent container's `text-align: center` on the `#hero` section.
-
-### Revised HTML Code
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -622,4 +610,4 @@ I've made the necessary changes below:
 </script>
 </body>
 </html>
-```
+
