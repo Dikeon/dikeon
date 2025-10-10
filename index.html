@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dikeon - Integratives Risikomanagement | Struktur . Sicherheit . Nachhaltigkeit</title>
+    <title>Dikeon - Integratives Risikomanagement</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -33,6 +33,7 @@
         html {
             scroll-behavior: smooth;
             font-size: 16px;
+            overflow-x: hidden;
         }
 
         body {
@@ -42,6 +43,7 @@
             background-color: var(--white);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -50,8 +52,12 @@
             margin-bottom: 0.75em;
             line-height: 1.3;
         }
-
-        h1 { font-size: 2.5rem; }
+        
+        h1 { 
+            font-size: 2.5rem; 
+            text-align: center; 
+        }
+        
         h2 { font-size: 2rem; }
         h3 { font-size: 1.5rem; }
         p { margin-bottom: 1rem; }
@@ -101,7 +107,7 @@
 
         .site-header {
             background-color: var(--white);
-            padding: 1rem 0;
+            padding: 0.7rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -115,7 +121,7 @@
         }
 
         .logo-link img {
-            max-height: 50px;
+            max-height: 70px;
             width: auto;
             display: block;
         }
@@ -156,7 +162,7 @@
             padding: 0.25rem 0.5rem;
             border: 1px solid var(--secondary-color);
             border-radius: var(--border-radius);
-            margin-left: 1.5rem;
+            margin-left: 1.5rem; 
         }
         .main-nav a[lang="en"]:hover, .main-nav a[lang="de"]:hover {
             background-color: var(--secondary-color);
@@ -196,18 +202,18 @@
         }
 
         .hero-logo-container {
-            background-color: #0A2B4C;
-            padding: 20px;
-            display: inline-block;
-            margin-bottom: 2rem;
+            max-width: 550px;
+            margin: 0 auto 2rem auto;
+            padding: 0;
             border-radius: var(--border-radius);
-            box-shadow: var(--shadow-lg);
+            box-shadow: none;
         }
         .hero-logo-container img {
-            max-width: 250px;
+            width: 100%;
             height: auto;
             display: block;
         }
+        
         .hero-tagline-sub {
             font-size: 1.5rem;
             letter-spacing: 3px;
@@ -226,14 +232,18 @@
             flex: 1;
         }
         #about-intro .about-image {
-            flex: 1;
-            max-width: 450px;
+            width: 80vw;
+            max-height: 250px;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 0;
+            box-shadow: none;
         }
         #about-intro .about-image img {
             width: 100%;
-            height: auto;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-lg);
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
         }
 
         .mission-vision-values-grid {
@@ -317,7 +327,6 @@
             color: var(--primary-color);
             margin-bottom: 1.5rem;
         }
-        /* No specific styling for the removed .btn-primary */
 
         .site-footer {
             background-color: var(--primary-color);
@@ -399,12 +408,12 @@
             #hero {
                 padding: 4rem 0;
             }
+            
         }
-
-    /* Add this new rule inside the <style> block */
-.link-color-text {
-    color: var(--accent-color); /* Uses the same color as the footer links */
-    
+        .link-color-text {
+            color: var(--accent-color); 
+            transition: color 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -412,17 +421,15 @@
 <header class="site-header">
     <div class="container">
         <a href="#hero" class="logo-link">
-            <!-- Pfad zur lokalen Datei: images/dikeon_logo.png -->
-            <img src="images/dikeon_logo.png" alt="Dikeon Logo" style="max-height: 50px;" onerror="this.onerror=null;this.src='https://placehold.co/150x50/0A2B4C/F0B400?text=Dikeon'">
+            <img src="images/hero1.png" alt="Dikeon Logo" style="max-height: 70px;" onerror="this.onerror=null;this.src='https://placehold.co/150x50/0A2B4C/F0B400?text=Dikeon'">
         </a>
         <nav class="main-nav">
             <ul>
                 <li><a href="#hero" class="active">Startseite</a></li>
-                <li><a href="#about-intro">Über Uns</a></li>
+                <li><a href="#about-intro">Über uns</a></li>
                 <li><a href="#mission-vision-values">Mission & Werte</a></li>
-                <li><a href="#services">Expertise</a></li>
-                <!-- Verlinkung zur englischen Seite: index_en.html -->
-                <li><a href="index_en.html" lang="en" hreflang="en">EN</a></li>
+                <li><a href="#services">Fachgebiete</a></li>
+                <li><a href="index.html" lang="en" hreflang="en">EN</a></li>
             </ul>
         </nav>
         <button class="mobile-nav-toggle" aria-label="Navigation umschalten" aria-expanded="false">
@@ -432,29 +439,29 @@
 </header>
 
 <main>
-    <!-- Hintergrundbildpfad: images/hero_background.jpg -->
     <section id="hero" style="background: linear-gradient(rgba(10, 43, 76, 0.75), rgba(10, 43, 76, 0.75)), url('images/hero_background.jpg') no-repeat center center/cover;">
         <div class="container text-center">
             <div class="hero-logo-container">
-                <!-- Pfad zur lokalen Datei: images/dikeon_logo.png -->
-                <img src="images/dikeon_logo.png" alt="Dikeon Solutions Logo" onerror="this.onerror=null;this.src='https://placehold.co/250x100/0A2B4C/F0B400?text=DIKEON+LOGO'">
+                <img src="images/logo2.png" alt="Dikeon Solutions Logo" onerror="this.onerror=null;this.src='https://placehold.co/300x100/0A2B4C/F0B400?text=DIKEON+LOGO'">
             </div>
-            <h1>INTEGRATIVES RISIKOMANAGEMENT</h1>
-            <p class="hero-tagline-sub">STRUKTUR . SICHERHEIT . NACHHALTIGKEIT</p>
-            </div>
+            <h1>INTEGRATIVES</h1>
+            <h1>RISIKO</h1>
+            <h1>MANAGEMENT</h1>
+            <p style="max-width: 600px; margin: 1rem auto 2rem auto;">Wir entwickeln integrierte Risikomanagementlösungen basierend auf fundierter wissenschaftlicher Expertise in One Health, Biosicherheit und Naturschutz.</p>
+            <a href="#services" class="btn btn-primary">Unsere Expertise</a>
+        </div>
     </section>
 
     <section id="about-intro" class="section-padding">
         <div class="container">
             <h2 class="text-center">Über Dikeon Solutions</h2>
+            <div class="about-image">
+                <img src="images/about_scientific_expertise.jpg" alt="Dikeon - Wissenschaftliche Expertise und Teamarbeit" onerror="this.onerror=null;this.src='https://placehold.co/1200x300/a0aec0/4a5568?text=Teamarbeit+Banner'">
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Dikeon Solutions steht an vorderster Front **integrativer Risikolösungen**, einzigartig positioniert durch unsere starke wissenschaftliche Grundlage in Veterinärmedizin, Naturschutzmedizin und fortschrittlichem Risikomanagement. Diese multidisziplinäre Expertise ermöglicht es uns, komplexe Herausforderungen an der Schnittstelle von menschlicher, tierischer und Umweltgesundheit anzugehen.</p>
-                    <p>Unsere Kernmission ist es, strategische Einblicke und praktische Lösungen zur Verbesserung der **Resilienz** gegenüber einem breiten Spektrum von Risiken zu liefern. Wir engagieren uns für die Förderung einer proaktiven Kultur der Vorsorge und nutzen evidenzbasierte Ansätze, um die öffentliche Gesundheit zu schützen, das ökologische Gleichgewicht zu gewährleisten und eine nachhaltige Entwicklung zu unterstützen. Bei Dikeon wandeln wir wissenschaftliches Verständnis in umsetzbare Strategien für eine sicherere und gesündere Welt um.</p>
-                </div>
-                <div class="about-image">
-                    <!-- Pfad zur lokalen Datei: images/about_scientific_expertise.jpg -->
-                    <img src="images/about_scientific_expertise.jpg" alt="Wissenschaftliche Expertise und Teamwork" onerror="this.onerror=null;this.src='https://placehold.co/450x300/a0aec0/4a5568?text=Teamwork+Bild'">
+                    <p>Dikeon Solutions steht an der Spitze integrierter Risikolösungen und ist durch eine starke wissenschaftliche Basis in Veterinärmedizin, Naturschutzmedizin und fortgeschrittenem Risikomanagement einzigartig positioniert. Diese multidisziplinäre Expertise ermöglicht es uns, komplexe Herausforderungen an der Schnittstelle zwischen Mensch, Tier und Umwelt zu bewältigen.</p>
+                    <p>Unsere Kernmission ist es, strategische Erkenntnisse und praktische Lösungen bereitzustellen, die die Widerstandsfähigkeit gegenüber einem breiten Spektrum von Risiken stärken. Wir fördern eine proaktive Kultur der Vorbereitung und nutzen evidenzbasierte Ansätze, um die öffentliche Gesundheit zu schützen, das ökologische Gleichgewicht zu sichern und nachhaltige Entwicklung zu unterstützen. Bei Dikeon verwandeln wir wissenschaftliche Erkenntnisse in umsetzbare Strategien für eine sicherere und gesündere Welt.</p>
                 </div>
             </div>
         </div>
@@ -465,22 +472,19 @@
             <h2 class="text-center">Unser Fokus</h2>
             <div class="mission-vision-values-grid">
                 <div class="mvv-card">
-                    <!-- Pfad zur lokalen Datei: images/mission_compass.jpg -->
                     <img src="images/mission_compass.jpg" alt="Kompass, Symbol unserer Mission" onerror="this.onerror=null;this.src='https://placehold.co/300x180/1A5A96/ffffff?text=MISSION'">
                     <h3>Unsere Mission</h3>
-                    <p class="section-intro-text">Wir sind spezialisiert auf umfassende Beratungsleistungen in Risikomanagement und Nachhaltigkeit. Unsere Mission ist es, die organisationale Resilienz durch innovative Lösungen und Expertenberatung zu stärken und proaktive Reaktionen auf Herausforderungen zu ermöglichen.</p>
+                    <p class="section-intro-text">Wir sind auf umfassende Beratungsleistungen im Bereich Risikomanagement und Nachhaltigkeit spezialisiert. Unsere Mission ist es, durch innovative Lösungen und fachkundige Beratung die organisatorische Widerstandsfähigkeit zu stärken und proaktive Reaktionen auf Herausforderungen zu ermöglichen.</p>
                 </div>
                 <div class="mvv-card">
-                    <!-- Pfad zur lokalen Datei: images/vision_globe.jpg -->
                     <img src="images/vision_globe.jpg" alt="Globus, Symbol unserer Vision" onerror="this.onerror=null;this.src='https://placehold.co/300x180/1A5A96/ffffff?text=VISION'">
                     <h3>Unsere Vision</h3>
-                    <p class="section-intro-text">Dikeon strebt danach, ein führender Anbieter exzellenter Beratungsdienstleistungen zu sein, der Organisationen befähigt, Risiken effektiv zu managen und Nachhaltigkeit als integralen Bestandteil ihrer Strategie zu etablieren – für eine sichere und zukunftsorientierte Entwicklung.</p>
+                    <p class="section-intro-text">Dikeon strebt danach, führend in der Bereitstellung exzellenter Beratungsleistungen zu sein, die Organisationen befähigen, Risiken effektiv zu managen und Nachhaltigkeit als integralen Bestandteil ihrer Strategie zu etablieren – für eine sichere und zukunftsfähige Entwicklung.</p>
                 </div>
                 <div class="mvv-card">
-                    <!-- Pfad zur lokalen Datei: images/values_lighthouse.jpg -->
                     <img src="images/values_lighthouse.jpg" alt="Leuchtturm, Symbol unserer Werte" onerror="this.onerror=null;this.src='https://placehold.co/300x180/1A5A96/ffffff?text=WERTE'">
                     <h3>Unsere Werte</h3>
-                    <p class="section-intro-text">Integrität, Expertise und Partnerschaft sind die Grundpfeiler unserer Arbeit. Wir verpflichten uns zu den höchsten ethischen Standards, fundiertem Fachwissen und einem kollaborativen Ansatz, um maßgeschneiderte und effektive Lösungen für unsere Kunden zu entwickeln.</p>
+                    <p class="section-intro-text">Integrität, Fachwissen und Partnerschaft sind die Grundpfeiler unserer Arbeit. Wir verpflichten uns zu höchsten ethischen Standards, tiefgreifendem Fachwissen und einem kollaborativen Ansatz, um maßgeschneiderte und effektive Lösungen für unsere Kundinnen und Kunden zu entwickeln.</p>
                 </div>
             </div>
         </div>
@@ -488,22 +492,22 @@
 
     <section id="services" class="section-padding">
         <div class="container">
-            <h2 class="text-center">Unsere Kernkompetenzbereiche</h2>
+            <h2 class="text-center">Unsere Kernkompetenzen</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <span class="service-card-icon">⚙️</span>
                     <h3>Risikomanagement</h3>
-                    <p>Umfassende Strategien zur Risikoidentifizierung, -bewertung und -minderung über verschiedene Sektoren hinweg. Wir entwickeln maßgeschneiderte Rahmenwerke, um Unsicherheiten zu managen und die Entscheidungsfindung für die organisationale Resilienz zu verbessern.</p>
+                    <p>Umfassende Strategien zur Risikoidentifizierung, -bewertung und -minderung in verschiedenen Sektoren. Wir entwickeln maßgeschneiderte Rahmenkonzepte zur Bewältigung von Unsicherheiten und zur Verbesserung der Entscheidungsfindung für organisatorische Resilienz.</p>
                 </div>
                 <div class="service-card">
                     <span class="service-card-icon">🌿</span>
                     <h3>Biosicherheit</h3>
-                    <p>Schutz von Gesundheits- und Agrarsystemen vor biologischen Bedrohungen. Unsere Dienstleistungen umfassen Prävention, Erkennung, Reaktionsplanung und Politikentwicklung für Infektionskrankheiten und invasive Arten.</p>
+                    <p>Schutz von Gesundheits- und Agrarsystemen vor biologischen Bedrohungen. Unsere Dienstleistungen umfassen Prävention, Erkennung, Reaktionsplanung und Politikentwicklung im Bereich Infektionskrankheiten und invasive Arten.</p>
                 </div>
                 <div class="service-card">
                     <span class="service-card-icon">⚕️</span>
-                    <h3>One Health (Einheit von Mensch, Tier, Umwelt)</h3>
-                    <p>Implementierung integrierter Ansätze, die die Vernetzung von menschlicher, tierischer und Umweltgesundheit anerkennen. Wir fördern die Zusammenarbeit zur Bekämpfung von Zoonosen, antimikrobiellen Resistenzen und Fragen der Lebensmittelsicherheit.</p>
+                    <h3>One Health</h3>
+                    <p>Umsetzung integrierter Ansätze, die die Vernetzung von menschlicher, tierischer und ökologischer Gesundheit anerkennen. Wir fördern Zusammenarbeit zur Bekämpfung zoonotischer Krankheiten, antimikrobieller Resistenzen und Lebensmittelsicherheitsprobleme.</p>
                 </div>
             </div>
         </div>
@@ -511,8 +515,9 @@
 
     <section id="cta-banner">
         <div class="container">
-            <h2>Arbeiten Sie mit Dikeon für eine resiliente Zukunft zusammen</h2>
-            <p style="color: var(--primary-color); max-width: 700px; margin: 0 auto 1.5rem auto;">Lassen Sie uns besprechen, wie Dikeons einzigartige Expertise in Risikomanagement, Biosicherheit und One Health Ihre spezifischen Herausforderungen lösen kann.</p>
+            <h2>Kooperieren Sie mit Dikeon für eine widerstandsfähige Zukunft</h2>
+            <p style="color: var(--primary-color); max-width: 700px; margin: 0 auto 1.5rem auto;">Lassen Sie uns besprechen, wie Dikeons einzigartige Expertise in Risikomanagement, Biosicherheit und One Health Ihre spezifischen Herausforderungen adressieren kann.</p>
+             <a href="mailto:dikeonde@gmail.com" class="btn btn-primary">Kontakt aufnehmen</a>
         </div>
     </section>
 </main>
@@ -521,9 +526,8 @@
     <div class="container">
         <p>© <span id="currentYear"></span> Dikeon Solutions. Alle Rechte vorbehalten.</p>
         <p>Wegweisende Lösungen in Risiko, Sicherheit und Nachhaltigkeit.</p>
-        <p><a href="mailto:contact@dikeon.de">dikeonde@gmail.com</a> | <span class="link-color-text">+49 (0) 1743995177</span></p>
-        <!-- Impressum-Link hinzugefügt -->
-        <p><a href="impressum.html">Impressum</a>
+        <p><a href="mailto:dikeonde@gmail.com">dikeonde@gmail.com</a> | <span class="link-color-text">+49 (0) 1743995177</span></p>
+        <p><a href="imprint.html">Impressum</a></p>
     </div>
 </footer>
 
@@ -539,7 +543,6 @@
         });
     }
 
-    // Smooth scrolling and active link highlighting logic
     const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
     const headerHeight = document.querySelector('.site-header') ? document.querySelector('.site-header').offsetHeight : 70;
 
@@ -577,7 +580,6 @@
         let currentSectionId = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            // Überprüfen Sie, ob der Benutzer über den Anfang des Abschnitts gescrollt hat, mit Anpassung für die Kopfzeilenhöhe
             if (window.scrollY >= sectionTop - (headerHeight + 50)) {
                 currentSectionId = section.getAttribute('id');
             }
@@ -590,7 +592,6 @@
             }
         });
 
-        // Spezielle Behandlung für den Hero-Abschnitt, wenn ganz oben
         const heroLink = document.querySelector('.main-nav a[href="#hero"]');
         if (heroLink && window.scrollY < sections[0].offsetTop - (headerHeight + 50)) {
             allNavLinks.forEach(nav => nav.classList.remove('active'));
