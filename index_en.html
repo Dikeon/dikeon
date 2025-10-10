@@ -222,7 +222,8 @@
             color: #e0e0e0;
             text-transform: uppercase;
         }
-
+        
+        /* --- MODIFIED CODE START --- */
         #about-intro .about-content {
             display: flex;
             gap: 2rem;
@@ -232,15 +233,20 @@
             flex: 1;
         }
         #about-intro .about-image {
-            flex: 1;
-            max-width: 90%;
-        }
-        #about-intro .about-image img {
-            width: 100%;
-            height: auto;
+            width: 80vw; /* 80% of the viewport width */
+            max-height: 250px; /* Maximum height to keep it thin */
+            margin: 2rem auto; /* Spacing above/below and centered */
+            overflow: hidden; /* Hides parts of the image that don't fit the container */
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-lg);
         }
+        #about-intro .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the area, cropping as needed */
+            border-radius: var(--border-radius);
+        }
+         /* --- MODIFIED CODE END --- */
 
         .mission-vision-values-grid {
             display: grid;
@@ -453,15 +459,15 @@
     <section id="about-intro" class="section-padding">
         <div class="container">
             <h2 class="text-center">About Dikeon Solutions</h2>
+            
             <div class="about-image">
-                    <img src="images/about_scientific_expertise.jpg" alt="Dikeon - Scientific expertise and teamwork" onerror="this.onerror=null;this.src='https://placehold.co/450x300/a0aec0/4a5568?text=Teamwork+Image'">
-                </div>
+                <img src="images/about_scientific_expertise.jpg" alt="Dikeon - Scientific expertise and teamwork" onerror="this.onerror=null;this.src='https://placehold.co/1200x300/a0aec0/4a5568?text=Teamwork+Banner'">
+            </div>
             <div class="about-content">
                 <div class="about-text">
                     <p>Dikeon Solutions is at the forefront of integrated risk solutions, uniquely positioned by our strong scientific foundation in veterinary medicine, conservation medicine, and advanced risk management. This multidisciplinary expertise allows us to address complex challenges at the interface of human, animal, and environmental health.</p>
                     <p>Our core mission is to provide strategic insights and practical solutions that enhance resilience to a wide spectrum of risks. We are committed to fostering a proactive culture of preparedness, leveraging evidence-based approaches to protect public health, ensure ecological balance, and support sustainable development. At Dikeon, we transform scientific understanding into actionable strategies for a safer and healthier world.</p>
                 </div>
-                
             </div>
         </div>
     </section>
